@@ -2,6 +2,12 @@ h1 {
     margin: 30px;
 }
 
+h2 {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 header h1{
     max-width: 300px;
     font-size:150%; /*フォントサイズの調整*/
@@ -57,18 +63,41 @@ nav a:hover{
 
 .main_visual img{
     width: 100%;
+    margin-top: 20px;
 }
 
 #myimage {
     width: 150px;
-    margin: 10px 0 10px 10px;
-    float: left;
 }
 
 #rank {
-    margin: 10px;
+    margin: 30px;
+}
+
+table thead tr th{
+    padding: 10px;
+    border: 1px solid;
 }
 
 table tbody tr td{
     padding: 10px;
+    border: 1px solid;
 }
+
+.introduction {
+    margin: 20px;
+    padding: 20px;  
+}
+
+#name {
+    font-size: 24px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+p {
+    margin: 20px;
+}
+
