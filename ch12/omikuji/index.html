@@ -9,12 +9,12 @@
 
 あなたの運勢は
 <hr>
-<span id="t1">こんにちは</span>
+<span id="t1" style="font-weight: bold;">こんにちは</span>
 <hr>
 <input id="mod" type="button" value="おみくじを引く">
 <br>
 おみくじの順番は
-大吉、中吉、小吉、吉、半吉、末吉、末小吉、凶、小凶、半凶、末凶、大凶
+大吉、中吉、小吉、吉、末吉、凶
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
@@ -22,10 +22,23 @@
 
 $(function(){
 
-    var lucky = ["大吉", "中吉", "小吉", "吉", "半吉", "末吉", "末小吉", "凶", "小凶", "半吉", "末凶", "大凶"]
+    var lucky = ["大吉", "中吉", "小吉", "吉", "末吉", "凶"]
 
     $('#mod').click(function(){ //文字を青くするボタン
-        var key = Math.floor( Math.random() * 13 ) ;
+      var key = Math.floor( Math.random() * 6 ) ;
+      if(key == 0){
+      	$('#t1').css('color','#ff0000');
+      }else if (key == 1) {
+      	$('#t1').css('color','#4444ff');
+      }else if (key == 2) {
+      	$('#t1').css('color','#8800aa');
+      }else if (key == 3) {
+      	$('#t1').css('color','#00aaaa');
+      }else if (key == 4) {
+      	$('#t1').css('color','#000044');
+      }else{
+				$('#t1').css('color','#ffaaaa');
+      }
     	var newText = lucky[key];
         $('#t1').text(newText);
     });
