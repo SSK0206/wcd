@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>おみくじ</title>
+</head>
+<body>
+
+
+あなたの運勢は
+<hr>
+<span id="t1">こんにちは</span>
+<hr>
+<input id="mod" type="button" value="おみくじを引く">
+<br>
+おみくじの順番は
+大吉、中吉、小吉、吉、半吉、末吉、末小吉、凶、小凶、半凶、末凶、大凶
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+
+$(function(){
+
+    var lucky = ["大吉", "中吉", "小吉", "吉", "半吉", "末吉", "末小吉", "凶", "小凶", "半吉", "末凶", "大凶"]
+
+    $('#mod').click(function(){ //文字を青くするボタン
+        var key = Math.floor( Math.random() * 13 ) ;
+    	var newText = lucky[key];
+        $('#t1').text(newText);
+    });
+
+});
+
+
+</script>
+</body>
+</html>

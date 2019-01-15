@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>jQueryサンプル</title>
+</head>
+<body>
+<span id="t1">Hello</span>
+<hr>
+文字の色:
+<input id="fc1" type="button" value="赤">
+<input id="fc2" type="button" value="緑">
+<input id="fc3" type="button" value="青">
+<br>
+背景の色:
+<input id="bgc1" type="button" value="赤">
+<input id="bgc2" type="button" value="緑">
+<input id="bgc3" type="button" value="青">
+<br>
+文字サイズ:
+<input id="fs1" type="button" value="12pt">
+<input id="fs2" type="button" value="18pt">
+<input id="fs3" type="button" value="24pt">
+<br>
+テキスト：
+<input id="ti" type="text"><input id="mod" type="button" value="テキストを変更">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+
+$(function(){
+		//文字の色
+    $('#fc1').click(function(){ //文字を赤くするボタン
+        $('#t1').css('color','red');
+    });
+    $('#fc2').click(function(){ //文字を緑にするボタン
+        $('#t1').css('color','green');
+    });
+    $('#fc3').click(function(){ //文字を青くするボタン
+        $('#t1').css('color','blue');
+    });
+
+    //背景の色
+    $('#bgc1').click(function(){ //文字を赤くするボタン
+        $('#t1').css('background-color','red');
+    });
+    $('#bgc2').click(function(){ //文字を緑にするボタン
+        $('#t1').css('background-color','green');
+    });
+    $('#bgc3').click(function(){ //文字を青くするボタン
+        $('#t1').css('background-color','blue');
+    });
+
+    //フォントサイズ
+    $('#fs1').click(function(){ //文字を赤くするボタン
+        $('#t1').css('fontSize','12px');
+    });
+    $('#fs2').click(function(){ //文字を緑にするボタン
+        $('#t1').css('fontSize','18px');
+    });
+    $('#fs3').click(function(){ //文字を青くするボタン
+        $('#t1').css('fontSize','24px');
+    });
+
+    $('#mod').click(function(){ //文字を青くするボタン
+    		var newText = $("#ti").val();
+        $('#t1').text(newText);
+    });
+
+});
+
+
+</script>
+</body>
+</html>
