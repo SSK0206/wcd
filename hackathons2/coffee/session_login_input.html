@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ログイン</title>
+<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body style="margin:0;">
+<img src="img/coffee_main.jpg" alt="" style="width:100%;position: relative;margin:0;padding: 0;">
+<header style="position:absolute;right:5%;top:2%;text-align: right;">
+    <a class="header_item" href="index.php">ホーム</a>
+    <a class="header_item" href="user_reg_input.html">ユーザー登録</a>
+    <a class="header_item" href="ch_password_input.html">パスワード変更</a>
+</header>
+
+<div style="position:absolute;left:0;right:0;top:10%;text-align: center;">
+    <h1>ログイン</h1>
+    <form action="session_login_exec.php" method="post">
+        ユーザ名：<input type="text" name="userName"><br>
+        パスワード：<input type="password" name="password"><br>
+        <input type="submit" value="認証">
+    </form>
+</div>
+
+
+</body>
+</html>

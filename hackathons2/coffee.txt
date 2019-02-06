@@ -1,0 +1,13 @@
+create database coffee;
+
+create table user(uid int not null AUTO_INCREMENT PRIMARY KEY, userName varchar(100) NOT NULL, password varchar(255) NOT NULL);
+
+//alter table user ADD PRIMARY KEY (uid);
+
+GRANT ALL ON coffee.* TO 'db1ds16201g'@'localhost';
+
+grant create, select, insert, update, delete, drop on coffee.* to 'db1ds16201g'@’localhost’;
+
+
+
+create table my_coffee(id int not null AUTO_INCREMENT PRIMARY KEY, uid int not null, coffeeName varchar(100) NOT NULL, point int not null, howTo varchar(300), comment varchar(300));
